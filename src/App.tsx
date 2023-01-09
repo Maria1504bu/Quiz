@@ -3,6 +3,7 @@ import { Difficulty, fetchQuizQuestions, QuestionState } from './API';
 
 import QuestionCard from './components/QuestionCard';
 import { GlobalStyle, Wrapper } from './App.style'
+import { directive } from '@babel/types';
 
 export type AnswerObject = {
   question: string;
@@ -61,6 +62,8 @@ const App = () => {
     }
   }
 
+  const percentage : number = Math.round((userAnswers.length/TOTAL_QUESTIONS) * 100);
+
   return (
     <div>
       <GlobalStyle />
@@ -69,6 +72,7 @@ const App = () => {
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className='start' onClick={startTrivia}>Start</button>) : null}
         {!gameOver ? <p className='score'>Score: {score}</p> : null}
+        {!gameOver && <div className='progress'><div className='progress-inner' style={{ width: `${percentage}%`}}/></div>}
         {loading && <p>Loading Questions</p>}
         {!loading && !gameOver && (
           <QuestionCard
