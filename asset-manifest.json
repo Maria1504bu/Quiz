@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/Quiz/static/js/main.6210e106.js",
+    "static/media/wallpaper.jpg": "/Quiz/static/media/wallpaper.99c734759c7ceb100f2d.jpg",
+    "index.html": "/Quiz/index.html",
+    "main.6210e106.js.map": "/Quiz/static/js/main.6210e106.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6210e106.js"
+  ]
+}

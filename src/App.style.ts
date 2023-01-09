@@ -27,6 +27,23 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
 
+    .progress {
+        width: 80%;
+        height: 10px;
+        border-radius: 30px;
+        background-color: rgb(232, 232, 232);
+        margin-bottom: 25px;
+    
+        &-inner {
+          height: 100%;
+          border-radius: 30px;
+          width: 80%;
+          background: rgb(18, 231, 48);
+          transition: all 0.3s ease-in-out;
+          background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        }
+      }
+
     > p {
         color: #fff;
     }
